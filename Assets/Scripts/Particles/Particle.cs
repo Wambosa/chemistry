@@ -1,13 +1,16 @@
 using Chemistry.Math;
+using UnityEngine;
 
 namespace Chemistry.Particles {
 
-    public abstract class Particle {
+	public abstract class Particle {
 
-        ElectronVolt mass;
+		public ElectronVolt mass;
 
-        float charge;
+		[Range(-2f, 2f)]
+		public float charge;
 
-        float spin;
-    }
+		[Range(-5f, 5f)]
+		public float spin;
+	}
 }

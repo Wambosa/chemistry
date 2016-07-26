@@ -1,19 +1,24 @@
+using System;
+
 namespace Chemistry.Particles.Fermions {
 
-    public enum QUARK_STATE {
-        NONE = 0,
-        UP,
-        DOWN,
-        STRANGE,
-        CHARM,
-        BOTTOM,
-        TOP
-    };
+	[Serializable]
+    public class Quark: Fermion {
 
-    public class Quark: Particle {
+		public enum TYPE {
+			UP_TYPE = 0,
+			DOWN_TYPE = 1
+		}
 
-        public QUARK_STATE State(){// ???
-            return QUARK_STATE.NONE;
-        }
+		//todo: 4th generation
+		public enum FLAVOR {
+			UP,
+			DOWN,
+			CHARM,
+			STRANGE,
+			TOP,
+			BOTTOM
+		};
+
     }
 }
