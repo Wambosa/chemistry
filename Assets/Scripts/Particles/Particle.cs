@@ -12,5 +12,7 @@ namespace Chemistry.Particles {
 
 		[Range(-5f, 5f)]
 		public float spin;
+
+		public Vector2 velocity;
 	}
 }
