@@ -3,12 +3,9 @@ using System;
 namespace Chemistry.Maths {
 
     [Serializable]
-    public struct ElectronVolt : IComparable {
+    public class ElectronVolt: CustomUnit, IComparable {
 
-        public const string unitOfMeasurement = "eV";
-
-        public char prefix;
-        public short value;
+        protected readonly string unitOfMeasurement = "eV";
 
         public static explicit operator ElectronVolt(long m) {
 
@@ -18,14 +15,6 @@ namespace Chemistry.Maths {
                 prefix = simplified.Key,
                 value = simplified.Value
             };
-        }
-
-        public override string ToString() {
-            return string.Format("{0} {1}{2}",
-                    value,
-					prefix,
-					unitOfMeasurement
-            );
         }
 
         public int CompareTo(object obj){

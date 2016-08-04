@@ -4,6 +4,8 @@ using System.Collections.Generic;
 namespace Chemistry.Maths {
     public static class SI {
 
+	    public static readonly int lightSpeed = 299792458;
+
         public static readonly Dictionary<char, long> MetricPrefix = new Dictionary<char, long>(){
             {'E', 1000000000000000000},
             {'P', 1000000000000000},

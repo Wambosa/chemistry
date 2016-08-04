@@ -7,12 +7,22 @@ namespace Chemistry.Particles {
 
 		public ElectronVolt mass;
 
-		[Range(-2f, 2f)]
+		[Range(-1f, 1f)]
 		public float charge;
 
-		[Range(-5f, 5f)]
+		[Range(0f, 1f)]
 		public float spin;
 
+		public ElectronVolt energy;
+
+		public Hertz frequency;
+
+		public Wavelength wavelength;
+
 		public Vector2 velocity;
+
+		public Vector2 acceleration;
+
+		public Vector2 momentum;
 	}
 }
